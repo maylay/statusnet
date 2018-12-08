@@ -77,9 +77,9 @@ class ImageFile
         $info = @getimagesize($this->filepath);
 
         if (!(
+            $info[2] == IMAGETYPE_BMP ||
             ($info[2] == IMAGETYPE_GIF && function_exists('imagecreatefromgif')) ||
             ($info[2] == IMAGETYPE_JPEG && function_exists('imagecreatefromjpeg')) ||
-            $info[2] == IMAGETYPE_BMP ||
             ($info[2] == IMAGETYPE_WBMP && function_exists('imagecreatefromwbmp')) ||
             ($info[2] == IMAGETYPE_XBM && function_exists('imagecreatefromxbm')) ||
             ($info[2] == IMAGETYPE_PNG && function_exists('imagecreatefrompng')))) {
