@@ -147,7 +147,8 @@ class MobileProfilePlugin extends WAP20Plugin
                 'wap1',
                 'wap2',
                 'webos',
-                'windows ce'
+                'windows ce',
+                'nintendo'
             );
 
             $blacklist = array(
